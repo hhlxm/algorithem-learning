@@ -27,8 +27,12 @@ while(l<r){
 用字符串存储数字，再用容器存每一个数（记得要-‘0’！！！！）
 
 # 前缀和
+## 重点：
 前缀和与差分互逆运算；
-重要的是，已知数组，要求差分，只要进行如下插入操作
+
+画图去想，最直观；
+
+已知数组，要求差分，只要进行如下插入操作
 ```c++
 Insert<diff,i,i,elem[i]>//相当于原始数组都为零，将数组插入时diff数组需要的值；
 
@@ -38,4 +42,12 @@ void Insert(vector<int > &diff,int l ,int r,int elem){
     diff[l]+=elem;
     diff[r+1]-=elem;
 }
+```
+## 注意
+边界条件，数组边界容易越界，所以需要加一个”0的矩形框“
+```c++
+vector<vector<int> >a(n+2,vector<int>(m+2));//多声明两行两列
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=m;j++) cin>>a[i][j];//只用中间的矩形
+    }
 ```
