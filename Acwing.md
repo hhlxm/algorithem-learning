@@ -5,7 +5,9 @@
 - [前缀和](#section3)
 - [双指针](#section4)
 - [位运算](#section5)
-- [lowbit()](#subseciton5)
+- [离散化处理](#section6)
+- [区间合并](#section7)
+
 
 ## 二分 <a name="section1"></a>
 
@@ -38,7 +40,7 @@ while(l<r){
 
 用字符串存储数字，再用容器存每一个数（记得要-‘0’！！！！）
 
-## 前缀和 <a name="subsection3"></a>
+## 前缀和 <a name="section3"></a>
 
 ### 主要运用
 当需要对一段区域的数进行改变时，把O（n）的时间复杂度改为O（1）
@@ -85,14 +87,23 @@ for(int i=0;i<n;i++){
 分清楚if while for的区别！
 
 ## 位运算 <a name="section5"></a>
-### lowbit() <a name="subsecion5"></a>
+#### lowbit() 
 ```c++
 int lowbit(int x){
   return x&-x;
 }
 ```
 
+## 离散化处理 <a name="section6"></a>
+### 主要目的
+把分布疏松的数据映射到排列紧凑的数组。
 
+```c++
+    //use_index 获得使用了的数组下标(稀疏)
+    sort(map_index.begin(),map_index.end());
+    map_index.erase(unique(map_index.begin(),map_index.end()),map_index.end()); ////去重，把下标进一步映射，紧凑
+```
 
+## 区间合并 <a name="section7"></a>
 
 
