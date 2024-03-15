@@ -4,6 +4,8 @@
 - [高精度](#section2)
 - [前缀和](#section3)
 - [双指针](#section4)
+- [位运算](#section5)
+- [lowbit()](#subseciton5)
 
 ## 二分 <a name="section1"></a>
 
@@ -82,8 +84,13 @@ for(int i=0;i<n;i++){
 ### 注意
 分清楚if while for的区别！
 
-
-
+## 位运算 <a name="section5"></a>
+### lowbit() <a name="subsecion5"></a>
+```c++
+int lowbit(int x){
+  return x&-x;
+}
+```
 
 
 
