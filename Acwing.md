@@ -67,3 +67,26 @@ for(int i=0;i<n;i++){
 ```
 ## 注意
 分清楚if while for的区别！
+
+
+# 目录
+
+- [第一节](#section1)
+- [第二节](#section2)
+- [第三节](#section3)
+
+## 第一节 <a name="section1"></a>
+
+这是第一节的内容。
+
+## 第二节 <a name="section2"></a>
+
+这是第二节的内容。
+
+### 子节 <a name="subsection1"></a>
+
+这是第二节的子节内容。
+
+## 第三节 <a name="section3"></a>
+
+这是第三节的内容。
