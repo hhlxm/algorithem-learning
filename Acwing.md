@@ -25,3 +25,17 @@ while(l<r){
 ```
 # 高精度
 用字符串存储数字，再用容器存每一个数（记得要-‘0’！！！！）
+
+# 前缀和
+前缀和与差分互逆运算；
+重要的是，已知数组，要求差分，只要进行如下插入操作
+```c++
+Insert<diff,i,i,elem[i]>//相当于原始数组都为零，将数组插入时diff数组需要的值；
+
+//思想：在a[l,r]上的数都加一个elem，则只要在diff[l]+=elem;diff[r+1]-=elem;
+//然后又前缀和与差分互逆运算；即a[i]=b[i]+=b[i-1]，所以可以更新数组
+void Insert(vector<int > &diff,int l ,int r,int elem){
+    diff[l]+=elem;
+    diff[r+1]-=elem;
+}
+```
