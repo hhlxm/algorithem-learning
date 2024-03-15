@@ -1,8 +1,9 @@
 # 目录
 
 - [二分](#section1)
-- [第二节](#section2)
-- [第三节](#section3)
+- [高精度](#section2)
+- [前缀和](#section3)
+- [双指针](#section4)
 
 ## 二分 <a name="section1"></a>
 
@@ -35,7 +36,7 @@ while(l<r){
 
 用字符串存储数字，再用容器存每一个数（记得要-‘0’！！！！）
 
-## 前缀和 <a name="subsection1"></a>
+## 前缀和 <a name="subsection3"></a>
 
 ### 主要运用
 当需要对一段区域的数进行改变时，把O（n）的时间复杂度改为O（1）
@@ -67,7 +68,7 @@ vector<vector<int> >a(n+2,vector<int>(m+2));//多声明两行两列
 
 
 
-## 双指针 <a name="section3"></a>
+## 双指针 <a name="section4"></a>
 
 ### 主要运用 
 将O（n^2）优化成O（n）
