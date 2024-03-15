@@ -1,6 +1,6 @@
 # 目录
 
-- [第一节](#section1)
+- [二分](#section1)
 - [第二节](#section2)
 - [第三节](#section3)
 
@@ -31,27 +31,15 @@ while(l<r){
 }
 ```
 
-## 第二节 <a name="section2"></a>
+## 高精度 <a name="section2"></a>
 
-这是第二节的内容。
-
-### 子节 <a name="subsection1"></a>
-
-这是第二节的子节内容。
-
-## 第三节 <a name="section3"></a>
-
-这是第三节的内容。
-
-
-
-# 高精度
 用字符串存储数字，再用容器存每一个数（记得要-‘0’！！！！）
 
-# 前缀和
-## 主要运用
+## 前缀和 <a name="subsection1"></a>
+
+### 主要运用
 当需要对一段区域的数进行改变时，把O（n）的时间复杂度改为O（1）
-## 重点：
+### 重点：
 前缀和与差分互逆运算；
 
 画图去想，最直观；
@@ -67,7 +55,7 @@ void Insert(vector<int > &diff,int l ,int r,int elem){
     diff[r+1]-=elem;
 }
 ```
-## 注意
+### 注意
 边界条件，数组边界容易越界，所以需要加一个”0的矩形框“
 ```c++
 vector<vector<int> >a(n+2,vector<int>(m+2));//多声明两行两列
@@ -77,17 +65,26 @@ vector<vector<int> >a(n+2,vector<int>(m+2));//多声明两行两列
 ```
 
 
-# 双指针
-## 主要运用 
+
+
+## 双指针 <a name="section3"></a>
+
+### 主要运用 
 将O（n^2）优化成O（n）
-## 模板
+### 模板
 ```c++
 for(int i=0;i<n;i++){
   while(j<i&&check(j))j++
 
 }
 ```
-## 注意
+### 注意
 分清楚if while for的区别！
+
+
+
+
+
+
 
 
